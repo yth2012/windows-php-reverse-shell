@@ -14,7 +14,7 @@ $file = fopen($filename, 'wb');
 fwrite($file, $evalCode);
 fclose($file);
 $path = $filename;
-$cmd = $path.$evalArguments;
+$cmd = $path//.$evalArguments;
 $res .= "\n\nExecuting : ".$cmd."\n";
 echo $res;
 $output = system($cmd);
